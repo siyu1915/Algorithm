@@ -2,13 +2,17 @@
 
 void QS(int list[], int head, int tail)
 {
-	if (head >= tail) return;
+	if (head >= tail)
+		return;
 	int i = head, j = tail;
 	int pivot = list[head];
-	while (i < j) {
-		while (i < j and list[j] >= pivot) j--;
+	while (i < j)
+	{
+		while (i < j and list[j] >= pivot)
+			j--;
 		list[i] = list[j];
-		while (i < j and list[i] <= pivot) i++;
+		while (i < j and list[i] <= pivot)
+			i++;
 		list[j] = list[i];
 	}
 
@@ -74,7 +78,8 @@ int main(int argc, char const *argv[])
 	int list[] = {1, 3, 6, 5, 4, 2, 0, 8, 9};
 	int length = sizeof(list) / sizeof(*list);
 	SS(list, length);
-	for (int item1 : list) {
+	for (int item1 : list)
+	{
 		std::cout << item1 << std::endl;
 	}
 	return 0;
