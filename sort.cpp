@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 void QS(int list[], int head, int tail)
 {
 	if (head >= tail)
